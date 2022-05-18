@@ -9,10 +9,7 @@ import javax.swing.JFrame;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Iterator;
 import javax.swing.*;
 import static library.AdminMenu.MenuAdmin;
 import static library.StudentMenu.MenuStudent;
@@ -83,15 +80,15 @@ public class LoginView extends JFrame implements ActionListener{
                 if (rs.next()) { //Move pointer below
                     f.dispose();
                     
-                    String admin = rs.getString("role"); //user is admin
-                    System.out.println(admin);
+                    String admin = rs.getString("role"); //mengambil role user
+                   
                     String UID = rs.getString("uid"); //Get user ID of the user
-                    if (admin.equals("1")) { //If boolean value 1
-                        System.out.println("Admin");
+                    if (admin.equals("1")) { //If boolean value 1/admin
+                        
                         setVisible(false);
                         MenuAdmin();
                     } else {
-                        System.out.println("Student");
+                        
                         setVisible(false);
                         MenuStudent(UID);
                     }

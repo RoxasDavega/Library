@@ -14,11 +14,11 @@ import java.util.logging.Logger;
  * @author user
  */
 public class Connector {
-    String DBurl = "jdbc:mysql://localhost/perpustakaan";
-    String DBUsername = "root";
-    String DBPassword = "";
-    public Connection koneksi;
-    public Statement statement;
+    private String DBurl = "jdbc:mysql://localhost/perpustakaan";
+    private String DBUsername = "root";
+    private String DBPassword = "";
+    Connection koneksi;
+    Statement statement;
    
   
     public Connector(){
